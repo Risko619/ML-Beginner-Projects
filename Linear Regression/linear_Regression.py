@@ -60,4 +60,4 @@ plt.xlabel(p)
 plt.ylabel('Final Grade')
 plt.show()
 
-''' To change the reuts shown on pyplot, we would change the "p =" variable'''
+''' To change the results shown on pyplot, we would change the "p =" variable'''
