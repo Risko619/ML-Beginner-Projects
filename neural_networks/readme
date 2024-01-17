@@ -1,1 +1,75 @@
+# Breast Cancer Classification with Support Vector Machines (SVM)
 
+## Overview
+
+This Python script demonstrates the use of Support Vector Machines (SVM) for classifying breast cancer data. The code specifically addresses situations where k-Nearest Neighbors (KNN) yields low accuracy on high-dimensional data without linear correspondence.
+
+## Requirements
+
+Make sure you have the required libraries installed. You can install them using the following command:
+```
+pip install scikit-learn
+```
+
+## Usage
+
+1. **Clone the Repository:**
+
+   ```
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
+
+2. **Run the Script:**
+
+   Execute the Python script using your preferred Python interpreter:
+
+   ```
+   python svm_breast_cancer.py
+   ```
+
+## Code Explanation
+
+1. **Loading the Dataset:**
+
+   The code uses the breast cancer dataset from scikit-learn, loading features (`x`) and labels (`y`).
+
+   ```python
+   cancer = load_breast_cancer()
+   x = cancer.data
+   y = cancer.target
+   ```
+
+2. **Train-Test Split:**
+
+   The dataset is split into training and testing sets using the `train_test_split` function.
+
+   ```python
+   x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size=0.2)
+   ```
+
+3. **Support Vector Machine (SVM) Implementation:**
+
+   A linear SVM classifier (`SVC`) is created and trained on the training data.
+
+   ```python
+   clf = svm.SVC(kernel='linear')
+   clf.fit(x_train, y_train)
+   ```
+
+4. **Prediction and Accuracy Calculation:**
+
+   The trained SVM model predicts labels for the test set, and accuracy is calculated using scikit-learn's `accuracy_score` function.
+
+   ```python
+   y_pred = clf.predict(x_test)
+   acc = metrics.accuracy_score(y_test, y_pred)
+   print("Accuracy:", acc)
+   ```
+
+## Summary
+
+In summary, this script serves as a demonstration of using SVM for breast cancer classification. 
+It leverages scikit-learn functionalities to load the dataset, split it for training and testing, train an SVM classifier,
+make predictions, and assess the accuracy of the model. 
+The primary aim is to evaluate SVM's performance on breast cancer classification tasks, especially in scenarios where KNN may not perform optimally.
