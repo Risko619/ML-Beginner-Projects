@@ -13,6 +13,7 @@ import pickle
 import os
 from matplotlib import style
 
+# Load/Read the 'student-mat.csv' or your preferred csv
 df = pd.read_csv('/Volumes/Leroy/Software Engineering/Machine Learning projects/Linear Regression/student-mat.csv')
 data = pd.read_csv('/Volumes/Leroy/Software Engineering/Machine Learning projects/Linear Regression/student-mat.csv', sep=";")
 print(data.head())
