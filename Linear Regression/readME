@@ -1,1 +1,27 @@
+Linear Regression Model and Data Visualization
+This code demonstrates how to build a linear regression model using Python's scikit-learn library and visualize the data using Matplotlib. 
+The model is trained on student data to predict the final grade ('G3') based on previous grades ('G1' and 'G2') and the number of absences.
 
+Getting Started
+Make sure to have the required libraries installed. You can install them using:
+
+pip install pandas numpy scikit-learn matplotlib
+
+Usage
+Run the script using a Python interpreter:
+
+python your_script_name.py
+The script loads the student dataset, selects relevant features, and splits the data into training and testing sets.
+
+It then trains a linear regression model and evaluates its accuracy on the test set.
+
+The model with the highest accuracy is saved as 'studentmodel.pickle' for future use.
+
+Scatter plots are generated to visualize the relationship between a selected feature and the final grade. Change the feature by modifying the 'p' variable.
+
+Additional Information
+The code uses Matplotlib to create scatter plots, allowing you to visually explore the relationship between different features and the final grade.
+
+Make sure to adjust the 'p' variable to visualize different features on the scatter plot.
+
+If you encounter any issues, ensure that the necessary libraries are installed using the provided installation command.
