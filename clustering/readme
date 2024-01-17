@@ -1,1 +1,53 @@
+# K-Means Clustering for Handwritten Digits
 
+## Overview
+
+This simple Python script demonstrates the use of K-Means clustering to group handwritten digits based on their visual features. It uses the scikit-learn library for machine learning and focuses on the digits dataset.
+
+## Requirements
+
+Make sure you have the required libraries installed. You can install them using:
+
+```
+pip install numpy scikit-learn
+```
+
+## How to Run
+
+1. Download the script `kmeans_clustering.py` to your local machine.
+2. Open a terminal and navigate to the folder containing the script.
+3. Run the script using the following command:
+
+```
+python kmeans_clustering.py
+```
+
+## What the Code Does
+
+1. **Imports Necessary Libraries:**
+   - NumPy for numerical operations.
+   - Scikit-learn for machine learning functionalities.
+
+2. **Loads Handwritten Digits Data:**
+   - Utilizes the digits dataset from scikit-learn, which contains images of handwritten digits (0 to 9).
+
+3. **Preprocesses Data:**
+   - Scales the features of the dataset to prepare them for clustering.
+
+4. **Sets Number of Clusters:**
+   - Specifies the desired number of clusters (groups) to form. In this case, `k = 10` for the 10 digits.
+
+5. **Defines a Clustering Evaluation Function:**
+   - Defines a function (`bench_k_means`) to evaluate the performance of the K-Means clustering algorithm.
+   - Prints various clustering metrics, such as inertia, homogeneity, completeness, and silhouette score.
+
+6. **Applies K-Means Clustering:**
+   - Creates a K-Means clustering model with 10 clusters using the "random" initialization method.
+   - Calls the evaluation function to assess the clustering performance.
+
+## Note
+
+- This script is a simplified example for educational purposes.
+- The dataset used here is small and well-known. In real-world scenarios, data preparation and model evaluation would be more complex.
+
+Feel free to experiment with the code and dataset to deepen your understanding of K-Means clustering and its applications in grouping similar data.
